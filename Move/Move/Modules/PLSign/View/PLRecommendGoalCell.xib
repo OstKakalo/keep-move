@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="KGk-i7-Jjw" customClass="PLRecommendGoalCell">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch.png" translatesAutoresizingMaskIntoConstraints="NO" id="UEe-uA-dB5">
+                        <rect key="frame" x="15" y="20" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="015-rY-MHL"/>
+                            <constraint firstAttribute="width" constant="50" id="tBJ-uJ-ZLJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="按时起床" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMR-rQ-8gL">
+                        <rect key="frame" x="85" y="35" width="69.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2S9-EZ-emb">
+                        <rect key="frame" x="323" y="30" width="70" height="30"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.72156862745098038" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="0UN-1o-Cxw"/>
+                            <constraint firstAttribute="height" constant="30" id="c3N-Dh-p0B"/>
+                        </constraints>
+                        <state key="normal" title="添加">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="addButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="elR-OA-94v"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2S9-EZ-emb" firstAttribute="centerY" secondItem="kMR-rQ-8gL" secondAttribute="centerY" id="74o-iD-Ie3"/>
+                    <constraint firstAttribute="trailing" secondItem="2S9-EZ-emb" secondAttribute="trailing" constant="20" id="9Oh-Bc-tES"/>
+                    <constraint firstItem="UEe-uA-dB5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="IO9-Cx-ogn"/>
+                    <constraint firstItem="UEe-uA-dB5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Z5K-Cz-TLz"/>
+                    <constraint firstItem="kMR-rQ-8gL" firstAttribute="centerY" secondItem="UEe-uA-dB5" secondAttribute="centerY" id="dpw-ku-zvF"/>
+                    <constraint firstItem="kMR-rQ-8gL" firstAttribute="leading" secondItem="UEe-uA-dB5" secondAttribute="trailing" constant="20" id="mNa-eZ-Ygb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addButton" destination="2S9-EZ-emb" id="WOO-w8-Gkp"/>
+                <outlet property="iconImageView" destination="UEe-uA-dB5" id="Ps3-40-W9g"/>
+                <outlet property="titleLabel" destination="kMR-rQ-8gL" id="Ll9-DI-Yro"/>
+            </connections>
+            <point key="canvasLocation" x="-303" y="76"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="stopwatch.png" width="50" height="50"/>
+    </resources>
+</document>

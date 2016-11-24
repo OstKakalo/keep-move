@@ -1,0 +1,11 @@
+target 'Move' do
+pod 'FMDB', '~>2.6.2'
+pod 'PNChart'
+pod 'INTULocationManager'
+pod 'Masonry'
+pod 'SDWebImage'
+pod 'AMap2DMap'
+pod 'AMapSearch'
+pod 'FTPopOverMenu'
+
+end
